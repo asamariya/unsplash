@@ -42,6 +42,11 @@ section.results {
   font-size: 12px;
 }
 
+section.results .single-result {
+  text-decoration: none;
+  color: #333;
+}
+
 section.results .single-result h2 {
   font-weight: 700;
 }

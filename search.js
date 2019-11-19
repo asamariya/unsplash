@@ -23,7 +23,8 @@ const searchUnsplash = async term => {
       author: result.user.name,
       width: result.width,
       height: result.height,
-      backgroundColor: (result.color || "#eee") + "33"
+      backgroundColor: (result.color || "#eee") + "33",
+      imagePageSrc: result.links.html
     };
   });
 };
@@ -34,14 +35,15 @@ const addResults = results => {
   results.forEach(result => {
     resultsTag.insertAdjacentHTML(
       "beforeend",
-
-      `<div class="single-result">
-        <div class="image" style="background-color: ${result.backgroundColor}">
-          <img src="${result.imageSrc}">
-        </div>
-        <h2>${result.description}</h2>
-        <p>By ${result.author} &mdash; ${result.width} x ${result.height}</p>
-      </div>`
+      `      
+        <a href="${result.imagePageSrc}" class="single-result" target=_blank>
+          <div class="image" style="background-color: ${result.backgroundColor}">
+            <img src="${result.imageSrc}">
+          </div>
+          <h2>${result.description}</h2>
+          <p>By ${result.author} &mdash; ${result.width} x ${result.height}</p>
+        </a>  
+      `
     );
   });
 };

@@ -30,6 +30,8 @@ section.results {
   padding: 32px;
   font-size: 12px;
   .single-result {
+    text-decoration: none;
+    color: #333;
     h2 {
       font-weight: 700;
     }
