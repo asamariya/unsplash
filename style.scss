@@ -14,16 +14,36 @@ input {
   outline: none;
 }
 
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 section.results {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 32px 32px;
   padding: 32px;
+  font-size: 12px;
   .single-result {
+    h2 {
+      font-weight: 700;
+    }
     .image {
       background: #eee;
       height: 350px;
       margin: 0 0 16px 0;
+      padding: 32px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      animation: fadein 1s 0.5s both;
     }
     span.loading {
       display: inline-block;
