@@ -5,7 +5,7 @@ const resultsTag = document.querySelector("section.results");
 const apiKey =
   "c7575ba5219bc16dc1f7157fd62fb192226d60625f96a1bc6b44f52e35e80693";
 
-const searchUrl = `https://api.unsplash.com/search/photos?per_page=24&query=`;
+const searchUrl = `https://api.unsplash.com/search/photos?per_page=48&query=`;
 
 const searchUnsplash = async term => {
   let response = await fetch(searchUrl + term, {
